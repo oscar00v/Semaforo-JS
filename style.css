@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    place-items: center;
+    background-color: aqua;
+}
+
+.contenedorSemaforo{
+    display: grid;
+    place-items: center;
+
+}
+
+.semaforo{
+    width: 100px;
+    height: 200px;
+    border-radius: 30px;
+    display: grid;
+    place-items: center;
+    background-color: rgb(39, 39, 39);
+    padding: 10px;
+    align-items: center;
+}
+.luz{
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    margin: 0px;
+}
+
+.luz::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.luz.active {
+
+    background-color: inherit;
+  
+    box-shadow: inherit;
+  
+  }
+  
+  .red.active {
+  
+    background-color: red;
+  
+    box-shadow: 0 0 10px 1px #c0392b;
+  
+  }
+  
+  .yellow.active {
+  
+    background-color: rgb(242, 255, 0);
+  
+    box-shadow: 0 0 10px 1px #8e9507;
+  
+  }
+  
+  .green.active {
+  
+    background-color: rgb(0, 255, 60);
+  
+    box-shadow: 0 0 10px 1px #049d04;
+  
+  }
